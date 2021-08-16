@@ -17,7 +17,7 @@ export class EmployeeService {
 
 
 
-  public getOrders(): Observable<Employee[]> {
+  public getemployee(): Observable<Employee[]> {
     return this.httpClient.get<Employee[]>(this.Url + 'employeedetails');
   }
 
