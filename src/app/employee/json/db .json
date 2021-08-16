@@ -1,0 +1,68 @@
+[  
+    {  
+      "id": 1,  
+      "Firstname": "Jack",  
+      "Lastname": "jack@gmail.com",  
+      "Birthdate" :"24-3-1993",
+      "Gender": "male",
+      "Department": "QA"
+    },  
+    {  
+        "id": 1,  
+        "Firstname": "Jack",  
+        "Lastname": "jack@gmail.com",  
+        "Birthdate" :"24-3-1993",
+        "Gender": "male",
+        "Department": "DevOps"
+      },
+      {  
+        "id": 1,  
+        "Firstname": "Jack",  
+        "Lastname": "jack@gmail.com",  
+        "Birthdate" :"24-3-1993",
+        "Gender": "male",
+        "Department": "UI"
+      }
+      ,
+      {  
+        "id": 1,  
+        "Firstname": "Jack",  
+        "Lastname": "jack@gmail.com",  
+        "Birthdate" :"24-3-1993",
+        "Gender": "male",
+        "Department": "QA"
+      }
+      ,
+      {  
+        "id": 1,  
+        "Firstname": "Jack",  
+        "Lastname": "jack@gmail.com",  
+        "Birthdate" :"24-3-1993",
+        "Gender": "male",
+        "Department": "Devlopment"
+      },
+    {  
+      "id": 2,  
+      "name": "Peter",  
+      "email": "peter@gmail.com",  
+      "gender": "male"  
+    },  
+    {  
+      "id": 3,  
+      "name": "Mary",  
+      "email": "mary@gmail.com",  
+      "gender": "female"  
+    },  
+    {  
+      "id": 4,  
+      "name": "Smith",  
+      "email": "smith@gmail.com",  
+      "gender": "male"  
+    },  
+    {  
+      "id": 5,  
+      "name": "John",  
+      "email": "john@gmail.com",  
+      "gender": "male"  
+    }  
+  ]  

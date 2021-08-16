@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <div class="col align-items-start">
+      <div class="col">
+        <h1> <span class="text-success">New-Employee-Form</span></h1>
+      </div><div class="container">
+    <form class="row" [formGroup]="EmpForm" (ngSubmit)="EmpForm.valid && employee()">
+
+        <div class="form-group" >    
+        <div class="col-md-6">
+            <label for="AccountNo" class="form-label">Firstname </label>
+            <input type="text" class="form-control" formControlName="Firstname" id="Firstname" required>
+        </div>
+
+        <span  class="text-danger"
+            *ngIf="employeeform.Firstname.touched  && employeeform.Firstname.errors?.required">
+            Firstname is Required
+        </span>
+</div>
+
+<div class="form-group" >
+        <div class="col-md-6">
+            <label for="Lastname" class="form-label">Lastname: </label>
+            <input type="text" class="form-control" formControlName="Lastname" id="Lastname" required>
+        </div>
+ 
+        <span  class="text-danger"
+            *ngIf="employeeform.Lastname.touched  && employeeform.Lastname.errors?.required">
+            Lastname is required
+        </span>
+</div>
+
+<div class="form-group" >
+        <div class="col-md-6">
+            <label for="Birthdate" class="form-label">Birthdate </label>
+            <input type="text" class="form-control" formControlName="Birthdate" id="Birthdate" required>
+        </div>
+
+        <span 
+            *ngIf="employeeform.Birthdate.touched  && employeeform.Birthdate.errors?.required">
+            Birthdate is required
+        </span>
+</div>
+
+<div class="form-group" >
+        <div class="col-md-6">
+            <label for="PhoneNo" class="form-label"></label>
+            <input type="text" class="form-control" formControlName="PhoneNo" id="PhoneNo" required>
+        </div>  
+    </div>
+     <div class="form-group" >
+        <div class="col-md-6">
+            <label for="Gender" class="form-label">Gender: </label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Gender" id="male" formControlName='Gender'
+                    value="male" checked>
+                <label class="form-check-label" for="male">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Gender"  id="female" formControlName='Gender' 
+                    value="female">
+                <label class="form-check-label" for="female">
+                    Female
+                </label>
+            </div>
+        </div>
+        </div>
+        <div class="form-group" >
+        <span class="text-danger"
+            *ngIf="employeeform.Gender.touched  && employeeform.Gender.errors?.required">
+         Gender is required
+        </span>
+        </div>
+
+        <div class="form-group" >
+        <div class="col-md-6">
+            <label for="Department" class="form-label">Department </label>
+            <input type="text" class="form-control" formControlName='Department' id="Department" required>
+        </div>
+    </div>
+         <span class="text-danger"
+            *ngIf="employeeform.address.touched  && employeeform.address.errors?.required">
+     Department is required
+        </span>
+<div class="form-group">
+            <button class="btn btn-primary" [disabled]="!EmpForm.valid">Submit</button>
+        </div>
+</form>
+</div>
+<router-outlet></router-outlet>

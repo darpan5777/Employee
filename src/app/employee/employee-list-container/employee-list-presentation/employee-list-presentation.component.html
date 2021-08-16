@@ -1,0 +1,44 @@
+
+<div class="container my-5">
+    
+ <div class="form-group">
+     <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="query" id="listSearch"> 
+  </div>
+
+    <div>
+      <button class="btn btn-primary float-right mb-3" ><i
+          class="fas fa-plus"></i>&nbsp;</button>
+      <table class="table table-stripede border border-secondary ">
+        <thead class="thead-light">
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Birthdate</th>
+          <th>Gender</th>
+          <th>Department</th>
+          <th class="text-center"></th>
+        </thead>
+        <tbody>
+  
+          <tr *ngFor="let employee of Response | searchFilter: query">
+            <td>{{employee.Firstname}}</td>
+            <td>{{employee.Lastname}}</td>
+            <td>{{employee.Birthdate}}</td>
+            <td>{{employee.Gender}}</td>
+            <td>{{employee.Department}}</td>
+            <td class="text-center">
+              <button class="btn btn-outline-primary m-1" data-toggle="tooltip" data-placement="right" title="Edit"
+                >
+                <i class="far fa-edit"></i>
+              </button>
+  
+              <button class="btn btn-outline-danger m-1" 
+                data-toggle="tooltip" data-placement="right" title="Delete" (click)="deleteemployee(employee.id)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+    
+        </tbody>
+      </table>
+    </div>
+   
